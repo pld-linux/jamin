@@ -7,5 +7,5 @@ Exec=jamin
 Icon=jamin.png
 Terminal=false
 Type=Application
-Categories=AudioVideo;Audio;
+Categories=Audio;
 # vi: encoding=utf-8
