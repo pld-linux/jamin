@@ -5,7 +5,7 @@ Version:	0.9.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://dl.sourceforge.net/sourceforge/jamin/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/jamin/%{name}-%{version}.tar.gz
 # Source0-md5:	2c98cd525304c35f6b9f881209b5e6e4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
