@@ -1,13 +1,12 @@
-%define		snap	20031212
 Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - Nak³adka na JACK do masteringu d¼wiêku
 Name:		jamin
-Version:	0.5.39
+Version:	0.8.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	%{name}-%{version}-%{snap}.tar.gz
-# Source0-md5:	2eda14232f6500cf8b97abf6255ba579
+Source0:	http://plugin.org.uk/jamin/%{name}-%{version}.tar.gz
+# Source0-md5:	65a0b03e4b0f10a5b5bedac845bcfba6
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://jamin.sf.net/
@@ -32,7 +31,7 @@ JAMin jest nak³adk± na JACK Audio Connection Kit umo¿liwiaj±c±
 profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
 
 %prep
-%setup -qn %{name}-%{version}-%{snap}
+%setup -q
 
 %build
 glib-gettextize --force --copy
