@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=JAMin
+Comment=JACK Audio Mastering interface
+Comment[pl]=Narzędzie do masteringu dźwięku
+Exec=jamin
+#Icon=jamin.png
+Terminal=false
+Type=Application
+Categories=Application;AudioVideo;
+
+# vi: encoding=utf-8
