@@ -1,5 +1,5 @@
 Summary:	JAMin - JACK audio mastering interface
-Summary(pl):	JAMin - Nak³adka na JACK do masteringu d¼wiêku
+Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
 Name:		jamin
 Version:	0.9.0
 Release:	1
