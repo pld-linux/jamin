@@ -1,17 +1,15 @@
 Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - Nak³adka na JACK do masteringu d¼wiêku
 Name:		jamin
-Version:	0.8.0
+Version:	0.9.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://plugin.org.uk/jamin/%{name}-%{version}.tar.gz
-# Source0-md5:	65a0b03e4b0f10a5b5bedac845bcfba6
+Source0:	http://dl.sourceforge.net/sourceforge/jamin/%{name}-%{version}.tar.gz
+# Source0-md5:	2c98cd525304c35f6b9f881209b5e6e4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 URL:		http://jamin.sf.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	fftw3-single-devel >= 3.0.1
 BuildRequires:	gtk+2-devel >= 1.3.13
 BuildRequires:	intltool
@@ -34,20 +32,12 @@ profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
 %setup -q
 
 %build
-glib-gettextize --force --copy
-intltoolize --copy --force --automake
-%{__libtoolize}
-%{__aclocal}
-%{__autoheader}
-%{__autoconf}
-%{__automake}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
