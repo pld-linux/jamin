@@ -1,3 +1,7 @@
+# TODO:
+# - with liblo http://plugin.org.uk/liblo
+# - correct install or send back to Moscow russian translation
+#
 Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
 Name:		jamin
@@ -9,14 +13,17 @@ Source0:	http://dl.sourceforge.net/jamin/%{name}-%{version}.tar.gz
 # Source0-md5:	2c98cd525304c35f6b9f881209b5e6e4
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Patch0:		%{name}-gcc34.patch
 URL:		http://jamin.sf.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	fftw3-single-devel >= 3.0.1
 BuildRequires:	gtk+2-devel >= 1.3.13
 BuildRequires:	intltool
-BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
+BuildRequires:	jack-audio-connection-kit-devel >= 0.80.0
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.0
-Requires:	ladspa-swh-plugins >= 0.4.3
+BuildRequires:	libxml2-devel >= 2.5
+Requires:	ladspa-swh-plugins >= 0.4.11
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +37,16 @@ profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+glib-gettextize --force --copy
+intltoolize --copy --force --automake
+%{__libtoolize}
+%{__aclocal}
+%{__autoheader}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
