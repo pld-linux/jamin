@@ -1,6 +1,7 @@
 # TODO:
 # - with liblo http://plugin.org.uk/liblo
 # - correct install or send back to Moscow russian translation
+#   (ALT got a patch for this)
 #
 Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
