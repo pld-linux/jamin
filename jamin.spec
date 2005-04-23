@@ -2,7 +2,7 @@ Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
 Name:		jamin
 Version:	0.95.0
-Release:	1
+Release:	1.1
 License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://heanet.dl.sourceforge.net/jamin/%{name}-%{version}.tar.gz
@@ -45,13 +45,15 @@ profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
 %{__autoconf}
 %{__automake}
 %configure
-%{__make}
+%{__make} \
+	plugindir=%{_libdir}/ladspa
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	plugindir=%{_libdir}/ladspa
 
 install -c %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 rm -f $RPM_BUILD_ROOT%{_datadir}/icons/jamin.svg
