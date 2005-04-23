@@ -1,0 +1,4 @@
+- 0.95.0, switched to working sf mirror, removed .desktop file (already
+  included), register mime for shared-mime-info and desktop database,
+  desktop patch added, BR: liblo-devel, switched to new icon, new style
+  macros, dropped gcc34 patch (already in sources)
