@@ -57,6 +57,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 install -c %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 rm -f $RPM_BUILD_ROOT%{_datadir}/icons/jamin.svg
+rm -f $RPM_BUILD_ROOT%{_libdir}/ladspa/*.la
 
 %find_lang %{name}
 
@@ -80,6 +81,6 @@ update-mime-database %{_datadir}/mime
 %{_datadir}/jamin
 %{_datadir}/mime/packages/*.xml
 %{_desktopdir}/*.desktop
-%{_libdir}/ladspa/*
+%attr(755,root,root) %{_libdir}/ladspa/*.so
 %{_mandir}/man1/*
 %{_pixmapsdir}/*.png
