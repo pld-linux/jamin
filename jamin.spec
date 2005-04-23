@@ -2,7 +2,7 @@ Summary:	JAMin - JACK audio mastering interface
 Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
 Name:		jamin
 Version:	0.95.0
-Release:	1.1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://heanet.dl.sourceforge.net/jamin/%{name}-%{version}.tar.gz
