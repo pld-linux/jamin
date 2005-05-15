@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 umask 022
-update-mime-database %{_datadir}/mime
+update-mime-database %{_datadir}/mime ||:
 %update_desktop_database_post
 
 %postun
