@@ -5,10 +5,10 @@ Version:	0.95.0
 Release:	2
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://heanet.dl.sourceforge.net/jamin/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sourceforge/jamin/%{name}-%{version}.tar.gz
 # Source0-md5:	032f2a4a578a8938f76282112d56c8d6
 Source1:	%{name}.png
-URL:		http://jamin.sf.net/
+URL:		http://jamin.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	fftw3-single-devel >= 3.0.1
@@ -51,11 +51,12 @@ profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	plugindir=%{_libdir}/ladspa
 
-install -c %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 rm -f $RPM_BUILD_ROOT%{_datadir}/icons/jamin.svg
 rm -f $RPM_BUILD_ROOT%{_libdir}/ladspa/*.la
 
