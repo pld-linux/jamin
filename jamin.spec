@@ -1,5 +1,5 @@
 Summary:	JAMin - JACK audio mastering interface
-Summary(pl):	JAMin - nak³adka na JACK-a do masteringu d¼wiêku
+Summary(pl.UTF-8):   JAMin - nakÅ‚adka na JACK-a do masteringu dÅºwiÄ™ku
 Name:		jamin
 Version:	0.95.0
 Release:	2
@@ -29,9 +29,9 @@ JAMin is the JACK Audio Connection Kit Audio Mastering interface,
 designed to perform professional audio mastering of any number of
 input streams.
 
-%description -l pl
-JAMin jest nak³adk± na JACK Audio Connection Kit umo¿liwiaj±c±
-profesjonalny mastering z dowolnej ilo¶ci ¼róde³ d¼wiêku.
+%description -l pl.UTF-8
+JAMin jest nakÅ‚adkÄ… na JACK Audio Connection Kit umoÅ¼liwiajÄ…cÄ…
+profesjonalny mastering z dowolnej iloÅ›ci ÅºrÃ³deÅ‚ dÅºwiÄ™ku.
 
 %prep
 %setup -q
