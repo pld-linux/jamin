@@ -1,5 +1,5 @@
 Summary:	JAMin - JACK audio mastering interface
-Summary(pl.UTF-8):   JAMin - nakładka na JACK-a do masteringu dźwięku
+Summary(pl.UTF-8):	JAMin - nakładka na JACK-a do masteringu dźwięku
 Name:		jamin
 Version:	0.95.0
 Release:	2
